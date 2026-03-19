@@ -220,7 +220,7 @@ Dans Active Tigger, on peut donner de nombreuses représentations numériques au
 - Regex : valeur booleenne, l'expression reguliere a-t-elle été trouvée dans le texte?
 - métadonnées à importées
 
-### Quelle est la différence entre les quick et BERT modèles
+## Quelle est la différence entre les quick et BERT modèles
 
 Dans les deux cas, ces modèles sont utilisés comme **classifieurs**. On les entraîne et évalue de la même manière. Les différences majeurs: 
 
