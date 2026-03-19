@@ -353,7 +353,11 @@
 <ul>
 <li>Éclairages sur des notions fondamentales (embeddings, etc.)</li>
 </ul></li>
-<li>Discussion sur les besoins actuels et futurs</li>
+<li>Discussion
+<ul>
+<li>Besoins</li>
+<li>Évolutions</li>
+</ul></li>
 </ul>
 </section>
 <section id="origines" class="slide level2">
@@ -364,6 +368,7 @@
 <ul>
 <li>Annoter des grands corpus avec un ensemble de labels</li>
 <li>Besoin de collaborer sur un projet</li>
+<li>Faciliter la formation aux outils</li>
 </ul></li>
 <li>Un démonstrateur en R développé par É. Ollion et J.Boelaert en 2023</li>
 <li>Mettre à l’échelle et constituer une communauté de pratique
@@ -398,6 +403,15 @@
 </ul>
 <p>Pour toute info : emilien.schultz[at]ensae.fr</p>
 </section>
+<section id="des-contributions-multiples" class="slide level2">
+<h2>Des contributions multiples</h2>
+<ul>
+<li>Comité Scientifique</li>
+<li>Développement interne</li>
+<li>Soutien par Ouestware (Paul Girard)</li>
+<li>Beaucoup de retours des utilisateurs : Merci !</li>
+</ul>
+</section>
 <section id="introduction-pratique-par-une-démo" class="slide level2">
 <h2>Introduction pratique par une démo</h2>
 <p><strong>Comment évolue la prise en compte des réflexion sur le genre dans la littérature en sciences sociales françaises ?</strong></p>
@@ -408,7 +422,7 @@
 <h2>Logique générale</h2>
 <p>Concrètement, mettre un label par abstract genre/pas genre sur un gros volume (et tester différentes stratégies)</p>
 <ul>
-<li>Travail conceptuel de définir les concepts</li>
+<li>Travail conceptuel pour définir les concepts</li>
 <li>Construire un échantillon d’éléments annotés
 <ul>
 <li>En maximisant la diversité et en limitant le temps passé</li>
@@ -429,10 +443,11 @@
 <li>Contraindre les étapes pour garantir la progression</li>
 <li>Avoir de l’active learning pour annoter plus vite</li>
 <li>Accès à des ressources GPU en fonction de l’instance</li>
+<li>Traitement en volume (encodeurs assez légers)</li>
 </ul>
 </section>
-<section id="étapes-de-la-démonstration" class="slide level2">
-<h2>Étapes de la démonstration</h2>
+<section id="étapes-de-la-démo" class="slide level2">
+<h2>Étapes de la démo</h2>
 <ul>
 <li>Connexion à une instance d’Active Tigger</li>
 <li>Gestion d’un projet (création de project, de schemes, de labels)</li>
@@ -559,8 +574,17 @@
 </section>
 <section id="que-sont-les-features" class="slide level2">
 <h2>Que sont les features ?</h2>
-<p>Dans Active Tigger, on peut donner de nombreuses représentations numériques aux textes: - Embeddings : générés avec des modèles pré-entrainés - Fasttext : généré avec des XXX - DFM : représentation par comptage de mots dans les documents - Regex : valeur booleenne, l’expression reguliere a-t-elle été trouvée dans le texte? - métadonnées à importées</p>
-<h3 id="quelle-est-la-différence-entre-les-quick-et-bert-modèles">Quelle est la différence entre les quick et BERT modèles</h3>
+<p>Dans Active Tigger, on peut donner de nombreuses représentations numériques aux textes:</p>
+<ul>
+<li>Embeddings : générés avec des modèles pré-entrainés</li>
+<li>Fasttext : généré avec des XXX</li>
+<li>DFM : représentation par comptage de mots dans les documents</li>
+<li>Regex : valeur booleenne, l’expression reguliere a-t-elle été trouvée dans le texte?</li>
+<li>métadonnées à importées</li>
+</ul>
+</section>
+<section id="quelle-est-la-différence-entre-les-quick-et-bert-modèles" class="slide level2">
+<h2>Quelle est la différence entre les quick et BERT modèles</h2>
 <p>Dans les deux cas, ces modèles sont utilisés comme <strong>classifieurs</strong>. On les entraîne et évalue de la même manière. Les différences majeurs:</p>
 <ul>
 <li>Le temps d’entraînement : &lt;2 min pour les quicks et jusqu’à plusieurs dizaines de minutes pour les plus gros modèles BERT</li>
