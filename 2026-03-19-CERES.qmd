@@ -19,7 +19,9 @@ lang: fr
     - CSS & NLP
 - Principales fonctionnalités d'Active Tigger et comment se lancer
     - Éclairages sur des notions fondamentales (embeddings, etc.)
-- Discussion sur les besoins actuels et futurs
+- Discussion
+    - Besoins
+    - Évolutions
 
 ## Origines
 
@@ -27,6 +29,7 @@ lang: fr
 - Comment ouvrir les usages stabilisés ?
     - Annoter des grands corpus avec un ensemble de labels
     - Besoin de collaborer sur un projet
+    - Faciliter la formation aux outils
 - Un démonstrateur en R développé par É. Ollion et J.Boelaert en 2023
 - Mettre à l'échelle et constituer une communauté de pratique
     - open source / reproductibilité
@@ -45,6 +48,7 @@ Une communauté plus large en formation
 - Analyser la présence de certaines informations dans des professions de foi (Frédéric Gonthier)
 - ...
 
+
 ## Situation actuelle
 
 Presque une V1 + communauté d'utilisateurs instance dev. du CREST
@@ -54,7 +58,16 @@ Presque une V1 + communauté d'utilisateurs instance dev. du CREST
 - [Dépot Github du code](github.com/activetigger/activetigger)
 - [Serveur Discord](https://discord.gg/sd2Em7rrW2)
 
+
 Pour toute info : emilien.schultz[at]ensae.fr
+
+
+## Des contributions multiples
+
+- Comité Scientifique
+- Développement interne
+- Soutien par Ouestware (Paul Girard)
+- Beaucoup de retours des utilisateurs : Merci !
 
 
 ## Introduction pratique par une démo
@@ -74,7 +87,7 @@ Données: Abstract des articles de sciences sociales publiés dans des revues fr
 Concrètement, mettre un label par abstract genre/pas genre sur un gros volume (et tester différentes stratégies)
 
 
-- Travail conceptuel de définir les concepts
+- Travail conceptuel pour définir les concepts
 - Construire un échantillon d'éléments annotés
     - En maximisant la diversité et en limitant le temps passé
 - Entrainer un classifieur qui peut prédire pour un texte les labels
@@ -89,9 +102,10 @@ Concrètement, mettre un label par abstract genre/pas genre sur un gros volume (
 - Contraindre les étapes pour garantir la progression
 - Avoir de l'active learning pour annoter plus vite
 - Accès à des ressources GPU en fonction de l'instance
+- Traitement en volume (encodeurs assez légers)
 
 
-## Étapes de la démonstration
+## Étapes de la démo
 
 - Connexion à une instance d'Active Tigger
 - Gestion d'un projet (création de project, de schemes, de labels)
