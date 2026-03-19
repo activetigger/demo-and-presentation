@@ -1,101 +1,168 @@
 ---
-title: "Démo Active Tigger - CERES"
-author: "Émilien S. Axel M."
-format: revealjs
+title: "Annoter avec Active Tigger"
+subtitle: "Un outil d'annotation assistée par IA"
+author: "Émilien Schultz · Axel Morin - CREST / CSS@IPP"
+institute: "Séminaire GARNET"
+date: today
+date-format: "D MMMM YYYY"
+format:
+  revealjs:
+    slide-number: true
+    progress: true
+    hash: true
+lang: fr
 ---
-
 ## Objectifs de la présentation
 
-- Pourquoi Active Tigger ? CSS & NLP
-- Principales fonctionnalités d'Active Tigger : comment s'y mettre ?
-    - Entrainer un classifieur
-- Éclairage sur les notions fondamentales (embeddings, etc.)
+- Pourquoi Active Tigger ? 
+    - CSS & NLP
+- Principales fonctionnalités d'Active Tigger et comment se lancer
+    - Éclairages sur des notions fondamentales (embeddings, etc.)
 - Discussion sur les besoins actuels et futurs
 
-## Naissance du projet Active Tigger 
+## Origines
 
 - Pour les pratiques avancées/spécifiques : le code
-- Mais quelques pratiques stabilisées / nécessité de démocratiser
+- Comment ouvrir les usages stabilisés ?
     - Annoter des grands corpus avec un ensemble de labels
     - Besoin de collaborer sur un projet
 - Un démonstrateur en R développé par É. Ollion et J.Boelaert en 2023
 - Mettre à l'échelle et constituer une communauté de pratique
-- Faire évoluer pour s'adapter aux besoin de recherche
+    - open source / reproductibilité
+- Plateforme de réflexion
 
+## Un outil ancré dans la recherche
 
-## Ancré dans la recherche
+Groupe [CSS@IPP](https://www.css.cnrs.fr/) au CREST (Groupe ENSAE-ENSAI / CNRS / Polytechnique)
 
-- Ollion, E., Boelaert, J., Coavoux, S., Delaine, E., Desprès, A., Gollac, S., Keyhani, N., & Mommeja, A. (2025). La part du genre. Genre et approche intersectionnelle dans les sciences sociales françaises au XXIe siècle. https://doi.org/10.31235/osf.io/qamux_v2
-- Claesson, A. (2025). Le prix de la visibilité. Une analyse computationnelle des interactions en ligne avec des député·es français·es. Revue française de science politique, . 75(3), 549-579. https://doi.org/10.3917/rfsp.753.0549
+-  La part du genre. Genre et approche intersectionnelle dans les sciences sociales françaises au XXIe siècle, Boelaert J. et al, 2025. 
+- Le prix de la visibilité. Une analyse computationnelle des interactions en ligne avec des député·es français·es. Revue française de science politique, Claesson A., 2025
+
+Une communauté plus large en formation
+
 - Identifier les articles de presse qui parlent de l'environnement (Jules Brion)
 - Analyser la présence de certaines informations dans des professions de foi (Frédéric Gonthier)
+- ...
 
-## Découverte pratique par la démo
+## Situation actuelle
 
-**Comment évolue la prise en compte des réflexion sur le genre dans la littérature en sciences sociales françaises ?**
+Presque une V1 + communauté d'utilisateurs instance dev. du CREST
+
+- [Site CSS.CNRS.fr](css.cnrs.fr/active-tigger)
+- [Documentation](activetigger.com/documentation)
+- [Dépot Github du code](github.com/activetigger/activetigger)
+- [Serveur Discord](https://discord.gg/sd2Em7rrW2)
+
+Pour toute info : emilien.schultz[at]ensae.fr
+
+
+## Introduction pratique par une démo
+
+**Comment évolue la prise en compte des réflexion sur le genre dans la littérature en sciences sociales françaises ?** 
+
+
+![](img/partdugenre.png){fig-align="center"}
+
 
 Données: Abstract des articles de sciences sociales publiés dans des revues françaises entre 2000 et 2022.
-
-Aperçu des données:
-- ~30,000 articles, découpées au niveau de la phrase = 50,000 lignes
-- Chaque phrase fait en moyenne 170 caractères (q25:100; q75:200)
-- Métadonnées présentes: revue, discipline et la proportion d'hommes/femmes dans les co-auteur.ices
-- Une colonne d'annotations utilisées comme "gold-standard"
 
 
 ## Logique générale
 
 
+Concrètement, mettre un label par abstract genre/pas genre sur un gros volume (et tester différentes stratégies)
 
 
+- Travail conceptuel de définir les concepts
+- Construire un échantillon d'éléments annotés
+    - En maximisant la diversité et en limitant le temps passé
+- Entrainer un classifieur qui peut prédire pour un texte les labels
+    - Améliorer suffisamment ce classifieur pour nos objectifs
+- L'appliquer à l'ensemble du corpus
+- Télécharger les résultats et le classifieur pour la reproductibilité
 
-## Le codage : toujours un travail conceptuel
+## Pourquoi Active Tigger ?
 
-1. La distinction homme/femme comme variable d’analyse (le plus souvent statistique, parfois la simple mention du sexe comme variable de contrôle)
-2. Les rapports sociaux en tant qu’ils sont appréhendés selon cet ordre sexué (ou leur absence dûment notée), comme la parentalité, la sexualité, la division du travail, les violences sexistes et sexuelles, etc. Cela inclut les études sur les femmes (ou les hommes) comme groupe social.
-3. L’identité de genre et les rôles de sexe, les hiérarchies internes aux groupes de sexe (féminités, masculinités, transidentité, non-binarité, performativité des rôles de sexe…). 
-4. L’identité sexuelle et plus généralement l’opération d’une distinction entre des sexualités (qui ne pourrait exister sans distinction préalable entre sexes). La sexualité n’a toutefois été prise en compte que dans la mesure où elle est abordée selon l’ordre de genre (et non simplement la sexualité comme variable statistique dans, par exemple, une enquête épidémiologique).
-
-
-## Pourquoi utiliser Active Tigger dans ce cas là?
-
+- Facilier l'interaction avec les données
 - Travail en collaboration
-- Facilier 
-- Nombre important de données textuelles à traiter
-- Pattern trop complexe pour des techniques de type dictionnaire
+- Contraindre les étapes pour garantir la progression
+- Avoir de l'active learning pour annoter plus vite
+- Accès à des ressources GPU en fonction de l'instance
 
-## Déroulé de la séance 
 
-Présentation des fonctionnalités
+## Étapes de la démonstration
+
 - Connexion à une instance d'Active Tigger
-- Gestion d'un projet (création de schemes, labels, inviter des collaborateur.ices)
-- Annotation mannuelle collaborative
-- Entraînement de modèles
-- Jonction entre l'annotation manuelle et les prédictions des modèles
+- Gestion d'un projet (création de project, de schemes, de labels)
+- Annotation manuelle collaborative d'un échantillon
+- Entraîner un modèle temporaire
+- Utiliser la prédiction d'un modèle pour annoter : l'active learning
+- Entrainer un modèle BERT
+- Généraliser la prédiction
 - Export des données
 
+*Et pour finir, revenir sur la création d'un projet*
 
+
+## Le point de départ : des données tabulaires
+
+Tout un travail en amont : mettre en forme les données (pas dans Active Tigger)
+
+- ~30,000 articles, découpées au niveau de la phrase = 50,000 lignes
+- Chaque phrase fait en moyenne 170 caractères (q25:100; q75:200)
+- Métadonnées présentes: revue, discipline et la proportion d'hommes/femmes dans les co-auteur.ices
+- Une colonne d'annotations utilisées comme "gold-standard"
+
+## Étape centrale & conceptuel : le codage
+
+- Différentes conception du genre
+- Quelles sont les catégories ?
+- Expérimenter
+    
+*Choix d'une conception large : à la fois rapports de genre, mention des aspects genrés dans les processus sociaux, etc.*
+
+Une étape qui n'en est pas une : stabilisation progressive
 
 
 ## Division du jeux de données en sous-ensembles
 
-![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.reneshbedre.com%2Fassets%2Fposts%2Fothers%2Fsplit_train_test.webp&f=1&nofb=1&ipt=0526fb9533e3540d23f639d1a3bbcb7d90e1ed785da5eb6e4d49faaa813ebfaa)
+Notion de jeu de données complet, d'entrainement (train) et d'évaluation (validation / test)
+
+![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.reneshbedre.com%2Fassets%2Fposts%2Fothers%2Fsplit_train_test.webp&f=1&nofb=1&ipt=0526fb9533e3540d23f639d1a3bbcb7d90e1ed785da5eb6e4d49faaa813ebfaa){fig-align="center"}
 
 Source : [Renesh Bedre — How to Split Data into Train and Test Sets in Python with sklearn](https://www.reneshbedre.com/blog/split-train-test-python.html)
 
-## Où trouver plus d'information
+## Passage à la démo
 
-- [Documentation](activetigger.com/documentation)
-- [Dépot Github](github.com/activetigger/activetigger)
-- [Site CSS.CNRS.fr](css.cnrs.fr)
-- [Serveur Discord](https://discord.gg/sd2Em7rrW2)
-- Mail: emilien.schultz[at]ensae.fr
+- Projet déjà créé
+- Comptes accessibles ici sur une instance démo : [https://minifi.ca/CJwfM](https://hedgedoc.lab.groupe-genes.fr/ScTncJbHSIudoSX2fx2DRQ)
 
-## Annexes 
+(vous pouvez créer des projets aussi, mais si on est nombreux ralentissements possibles)
 
---- 
 
-### Qu'est ce qu'un embedding?
+# Démo
+
+## Aller plus loin : d'autres fonctionnalités
+
+- Explorer avec Bertopic
+- Sélectionner avec la projection
+- Utiliser les prédictions des BERT pour l'active learning
+- Comparer les annotations entre utilisateurs
+- Expérimenter avec le génératif
+- Client Python pour gérer l'instance
+
+## Se lancer
+
+- Se lancer dans un projet
+- Venir discuter sur le discord
+- Réfléchir à la prochaine étape
+    - Les modules à développer
+- Ouvrir de nouvelles instances
+
+
+# Quelques notions
+
+## Qu'est ce qu'un embedding?
 
 Les embeddings (ou plongement) sont des représentations vectorielles d'une entité qui encode son information pour permettre ensuite des traitements de machine learning
 
@@ -105,21 +172,24 @@ Source [Joel Barnard — What is embedding?](https://www.ibm.com/think/topics/em
 
 Source: [Manoj Kumar — Explain vector embeddings to your mom](https://peerlist.io/manojsde/articles/explain-vector-embeddings-to-your-mom)
 
---- 
 
-### Qu'est ce qu'un classifier BERT ?
+## Logique générale de l'apprentissage supervisé
+
+
+
+## Qu'est-ce que l'Active Learning ?
+
+
+
+## Qu'est ce qu'un classifier BERT ?
 
 ![](https://jalammar.github.io/images/BERT-classification-spam.png)
 
 Source: [Jay Alammar — The Illustrated BERT, ELMo, and co. (How NLP Cracked Transfer Learning)](https://jalammar.github.io/illustrated-bert/)
 
---- 
-
 ### Qu'est ce qu'une projection 2D ?
 
---- 
-
-### Que sont les features ? 
+## Que sont les features ? 
 
 Dans Active Tigger, on peut donner de nombreuses représentations numériques aux textes: 
 - Embeddings : générés avec des modèles pré-entrainés
@@ -127,8 +197,6 @@ Dans Active Tigger, on peut donner de nombreuses représentations numériques au
 - DFM : représentation par comptage de mots dans les documents
 - Regex : valeur booleenne, l'expression reguliere a-t-elle été trouvée dans le texte?
 - métadonnées à importées
-
----
 
 ### Quelle est la différence entre les quick et BERT modèles
 
