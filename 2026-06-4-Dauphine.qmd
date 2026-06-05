@@ -1,8 +1,7 @@
 ---
-title: "Active Tigger"
-subtitle: "CLASSIFICATION & EXPLORATION DE CORPUS TEXTUELS"
-author: "Émilien Schultz · Axel Morin - CREST / CSS@IPP"
-institute: "L'IA A L'HEURE DES SHS ET DE L'APERO"
+title: "ActiveTigger ![](img/at.png){height=100px}"
+subtitle: "Annoter un corpus textuel et entrainer des classifieurs"
+author: "Émilien Schultz / CSS@IPP"
 date: today
 date-format: "D MMMM YYYY"
 format:
@@ -10,56 +9,74 @@ format:
     slide-number: true
     progress: true
     hash: true
+    logo: img/at.png
 lang: fr
 ---
 
 ## Petit tour de table
 
-- L'équipe d'Active Tigger
+- L'équipe d'ActiveTigger
 - Vous :
     - Déjà été confronté.e.s à des corpus textuels ?
     - À des outils de textométrie ? de NLP ?
-    - À'utilisation de modèles / IA ?
+    - À l'utilisation de modèles / IA ?
 
 ## Objectifs de la présentation
 
-- Pourquoi Active Tigger ? 
+- Pourquoi ActiveTigger ? 
     - CSS & NLP
-- Principales fonctionnalités d'Active Tigger
-    - Notions fondamentales (embeddings, etc.)
-    - Comment se lancer
+    - Principales fonctionnalités d'ActiveTigger
+- Pratiquer
+    - Démo
+    - Comment se lancer ?
 - Discussion
     - Usages spécifiques
     - Evolution de nos pratiques
 
-## Origines d'Active Tigger
+## Origines d'ActiveTigger
 
-- Pour les pratiques avancées/spécifiques : le code
-- Question : démocratiser des usages stabilisés ?
+- Des usages de recherche stabilisés
     - Annoter des grands corpus avec un ensemble de labels
+- Démocratiser l'accès au-delà du code
+    - Démonstrateur en R (É. Ollion et J.Boelaert en 2023)
+    - Mettre à l'échelle et constituer une communauté de pratique
+- Faciliter les interactions humaines
     - Besoin de collaborer sur un projet
     - Faciliter la formation aux outils
-- Démonstrateur en R (É. Ollion et J.Boelaert en 2023)
-- Mettre à l'échelle et constituer une communauté de pratique
-    - open source / reproductibilité
 
-## Un outil ancré dans la recherche
+## Impacts de recherche
 
 Groupe [CSS@IPP](https://www.css.cnrs.fr/) au CREST
 
 - [Le prix de la visibilité. Une analyse computationnelle des interactions en ligne avec des député·es français·es. Revue française de science politique, Claesson A., 2025](https://shs.cairn.info/revue-revue-francaise-de-science-politique-2025-3-page-IX)
 -  [La part du genre. Genre et approche intersectionnelle dans les sciences sociales françaises au XXIe siècle, Boelaert J. et al, 2025.](https://shs.cairn.info/revue-actes-de-la-recherche-en-sciences-sociales-2025-3-4-page-126?lang=fr)
 
-
 Communauté plus large en formation
 
 - Identifier les articles de presse qui parlent de l'environnement (Jules Brion)
+- Traitement de corpus d'image (Adrien Rougier et Francesco Colonna)
 - ...
+
+## Des valeurs structurantes
+
+- Augmenter l'humain de manière contrôlée, pas le remplacer
+- Favoriser l'exploration, l'idéation et les échanges
+- Maitriser le code & les composants utilisés (code auditable)
+- Évolutif en fonction des besoins de recherche
+    - Nouvelles collaborations autour des instruments
+
+## Des contributions multiples
+
+- Comité Scientifique
+- Accompagnement par Ouestware (Paul Girard)
+- Beaucoup de retours des utilisateurs : Merci !
+    - Nouvelles features
+    - Intégration continue
 
 
 ## Situation actuelle
 
-Presque une V1 + communauté d'utilisateurs instance dev. du CREST
+Une V1 + communauté d'utilisateurs instance dev. du CREST
 
 - [Page sur le groupe CSS](css.cnrs.fr/active-tigger)
 - [Dépot Github du code](github.com/activetigger/activetigger)
@@ -70,15 +87,7 @@ Presque une V1 + communauté d'utilisateurs instance dev. du CREST
 Pour toute info : emilien.schultz[at]ensae.fr
 
 
-## Des contributions multiples
-
-- Comité Scientifique
-- Développement interne
-- Soutien par Ouestware (Paul Girard)
-- Beaucoup de retours des utilisateurs : Merci !
-
-
-## Introduction pratique par une démo
+## Concrètement ? D'abord une question
 
 **Comment évolue la prise en compte des réflexion sur le genre dans la littérature en sciences sociales françaises ?** 
 
@@ -95,15 +104,16 @@ Données: Abstract des articles de sciences sociales publiés dans des revues fr
 **TL;DR : Mettre un label "genre"/"pas genre" sur un gros volume d'abstracts**
 
 
-- Travail conceptuel pour définir les concepts
-- Construire un échantillon d'éléments annotés
-    - En maximisant la diversité et en limitant le temps passé
+- Définir les concepts
+- Annoter un corpus d'entrainement
+    - Maximiser la diversité et limiter le temps passé
 - Entrainer un classifieur pour prédire
-    - Améliorer suffisamment ce classifieur pour nos objectifs
+    - Améliorer à un seuil acceptable
 - L'appliquer à l'ensemble du corpus
 - Télécharger les résultats
+- Analyser...
 
-## Pourquoi Active Tigger ?
+## Pourquoi ActiveTigger ?
 
 *Tout peut être fait avec un tableur et du code*
 
@@ -114,6 +124,12 @@ Données: Abstract des articles de sciences sociales publiés dans des revues fr
 - Accès à des ressources GPU en fonction de l'instance
 - Traitement en volume (encodeurs assez légers)
 
+
+## Quand utilise-t-on ActiveTigger ?
+
+- **Phase initiale** : explorer les données
+- **Phase intermédiaire** : stabiliser un codebook (schémas/labels) et discuter des cas limites
+- **Phase avancée** : annoter un grand corpus avec un classifieur bien entraîné
 
 ## Étapes principales
 
@@ -131,7 +147,7 @@ Données: Abstract des articles de sciences sociales publiés dans des revues fr
 
 ## Au commencement : des données
 
-Tout un travail en amont : mettre en forme les données dans un tableau (pas dans Active Tigger)
+Tout un travail en amont : mettre en forme les données dans un tableau (pas dans ActiveTigger)
 
 - ~30,000 articles, découpées au niveau de la phrase = 50,000 lignes
 - Métadonnées présentes: revue, discipline et la proportion d'hommes/femmes dans les co-auteur.ices
@@ -170,11 +186,28 @@ Source : [Renesh Bedre — How to Split Data into Train and Test Sets in Python 
 
 ## Se lancer
 
+- Envoyer un mail pour obtenir un compte
+    - Ou créer sa propre instance
 - Se lancer dans un projet
 - Venir discuter sur le Discord
-- Réfléchir à la prochaine étape
-    - Les modules à développer
-- Ouvrir de nouvelles instances
+
+
+## La feuille de route ?
+
+- Améliorer l'intégration de l'IA générative
+    - Pour expérimenter
+    - Pour traduire
+    - ...
+- Annoter des images !
+- Une meilleure architecture
+    - Gestion de la file d'attente
+    - API avec des jobs slurm ?
+
+**Toujours ouverts aux suggestions !**
+
+## Comment citer ActiveTigger
+
+> Schultz, E., Boelaert, J., Morin, A., Bonutti D'Agostini, E., Claesson, A., Ollion, É., & Chatelain, A. (2026). ActiveTigger: An open source collaborative text annotation software for computational social sciences. In Proceedings of the 18th International Conference on Statistical Analysis of Textual Data (JADT 2026), Palermo, Italy, July 8–10, 2026.
 
 
 # Annexe : notions
