@@ -176,7 +176,7 @@ Source : [Renesh Bedre — How to Split Data into Train and Test Sets in Python 
 ## Passage à la démo
 
 - Projet déjà créé
-- Comptes accessibles ici sur une instance démo : [https://shorturl.at/0gNFH](https://shorturl.at/0gNFH)
+- Comptes accessibles ici sur une instance démo : [https://tinyurl.com/f6cvxvya](https://tinyurl.com/f6cvxvya)
 
 (vous pouvez créer des projets aussi, mais si on est nombreux ralentissements possibles)
 
