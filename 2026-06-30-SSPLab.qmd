@@ -1,10 +1,10 @@
 ---
 title: "ActiveTigger ![](img/at.png){height=100px}"
-subtitle: "Annoter un corpus textuel et entrainer des classifieurs"
+subtitle: "Groupe de veille en analyse textuelle INSEE"
 author: "Émilien Schultz / CSS@IPP"
 date: today
 date-format: "D MMMM YYYY"
-format:
+format: 
   revealjs:
     slide-number: true
     progress: true
@@ -74,12 +74,14 @@ Une V1 en pré-release et une communauté d'utilisateurs instance dev. du CREST
 - [Documentation](activetigger.com/documentation)
 - [Serveur Discord](https://discord.gg/sd2Em7rrW2)
 
+Pour avoir un compte sur l'instance du CREST : css@ensae.fr
+
 
 ## Pourquoi ActiveTigger ?
 
 *Tout peut être fait avec un tableur et du code*
 
-- Facilier l'interaction avec les données
+- Faciliter l'interaction avec les données
 - Travail en collaboration
 - Contraindre les étapes pour garantir la progression
 - Avoir de l'active learning pour annoter plus vite
@@ -111,14 +113,6 @@ Données: Abstract des articles de sciences sociales publiés dans des revues fr
 - Télécharger les résultats
 - Analyser...
 
-
-
-
-## Quand utilise-t-on ActiveTigger ?
-
-- **Phase initiale** : explorer les données
-- **Phase intermédiaire** : stabiliser un codebook (schémas/labels) et discuter des cas limites
-- **Phase avancée** : annoter un grand corpus avec un classifieur bien entraîné
 
 ## Étapes principales
 
@@ -154,20 +148,10 @@ Travail conceptuel : différentes conception du genre
 Une étape qui n'en est pas une : stabilisation progressive
 
 
-## Séparer l'entrainement et l'évaluation
-
-Notion de jeu de données complet, d'entrainement (train) et d'évaluation (validation / test)
-
-![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.reneshbedre.com%2Fassets%2Fposts%2Fothers%2Fsplit_train_test.webp&f=1&nofb=1&ipt=0526fb9533e3540d23f639d1a3bbcb7d90e1ed785da5eb6e4d49faaa813ebfaa){fig-align="center"}
-
-Source : [Renesh Bedre — How to Split Data into Train and Test Sets in Python with sklearn](https://www.reneshbedre.com/blog/split-train-test-python.html)
-
 ## Passage à la démo
 
 - Projet déjà créé
 - Comptes accessibles ici sur une instance démo : [https://hedgedoc.lab.groupe-genes.fr/XuEZOCBfS-qH1OS88aq9hA](https://hedgedoc.lab.groupe-genes.fr/XuEZOCBfS-qH1OS88aq9hA)
-
-(vous pouvez créer des projets aussi, mais si on est nombreux ralentissements possibles)
 
 
 # Démo
