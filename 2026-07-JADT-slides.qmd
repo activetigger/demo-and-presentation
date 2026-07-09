@@ -29,14 +29,14 @@ lang: en
 - Small LLM (BERT) can be useful once fine-tuned, especially to scale
   - And with embeddings possibility to train classic ML
 - Need for reproducible and **on-premises** solutions
-    - Sensitive data, GDPR $\Rightarrow$, reproducibility
+    - Sensitive data, GDPR, reproducibility, ...
 
 
 ## Introducing ActiveTigger
 
 *An open source tool to collaboratively annotate text corpora and train classifiers with active learning to speed up annotation.*
 
-Built since ~2020 from research practice (J. Boelaert & É. Ollion) $\rightarrow$ public **v1.0.0 released in May 2026**
+Prototype ~2020 from research practices (J. Boelaert & É. Ollion) $\rightarrow$ refacto & public **v1.0.0 released in May 2026**
 
 - **Document-level** annotation of large corpora of short texts
 - **Sensible defaults first**, customization later -- avoid overwhelming non-experts
@@ -54,19 +54,20 @@ Built since ~2020 from research practice (J. Boelaert & É. Ollion) $\rightarrow
 
 ## A growing community
 
-- Dozens of research projects since 2023; published studies: 
-  - gender in French social sciences (Boelaert et al. 2025), MPs on Twitter (Claesson 2025)
+- Dozens of research projects since 2023 with published studies
+  - [gender in French social sciences (Boelaert et al. 2025)](https://shs.cairn.info/revue-actes-de-la-recherche-en-sciences-sociales-2025-3-4-page-126?lang=fr), [The cost of the visibility of MPs on Twitter (Claesson 2025)](https://shs.cairn.info/revue-revue-francaise-de-science-politique-2025-3-page-IX?lang=fr)
 - Available dev instance @CREST (with ~ 150 users)
 
-Launch your own instance (docker & helm chart on its way)
+Available code & docs
 
 - Code: `github.com/activetigger/activetigger`
 - Docs: `activetigger.com/documentation` · Discord community
+- Videos are on their way
 
 
-## Let's have a demo: gender in French social sciences
+## Demo
 
-*How prominent is gender-related research in French social science publications?* (Boelaert et al. 2025, ARSS)
+*How prominent is gender-related research in French social science publications?*
 
 
 ![](img/active-tigger-overview.svg){fig-align="center" height="75%"}
