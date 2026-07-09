@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="fr"><head>
-<script src="2026-06-30-SSPLab_files/libs/clipboard/clipboard.min.js"></script>
-<script src="2026-06-30-SSPLab_files/libs/quarto-html/tabby.min.js"></script>
-<script src="2026-06-30-SSPLab_files/libs/quarto-html/popper.min.js"></script>
-<script src="2026-06-30-SSPLab_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="2026-06-30-SSPLab_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="2026-06-30-SSPLab_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="2026-06-30-SSPLab_files/libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<html lang="en"><head>
+<script src="2026-07-JADT-slides_files/libs/clipboard/clipboard.min.js"></script>
+<script src="2026-07-JADT-slides_files/libs/quarto-html/tabby.min.js"></script>
+<script src="2026-07-JADT-slides_files/libs/quarto-html/popper.min.js"></script>
+<script src="2026-07-JADT-slides_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="2026-07-JADT-slides_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="2026-07-JADT-slides_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="2026-07-JADT-slides_files/libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.36">
 
-  <meta name="author" content="Émilien Schultz / CSS@IPP">
+  <meta name="author" content="É. Schultz, J. Boelaert, A. Morin, A. Claesson, E. Bonutti D’Agostini, A. Chatelain, É. Ollion">
   <title>ActiveTigger </title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="2026-06-30-SSPLab_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="2026-06-30-SSPLab_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="2026-07-JADT-slides_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="2026-07-JADT-slides_files/libs/revealjs/dist/reveal.css">
   <style>
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -32,11 +32,11 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="2026-06-30-SSPLab_files/libs/revealjs/dist/theme/quarto-2740581606dc327e82f18f789b69d8a0.css">
-  <link href="2026-06-30-SSPLab_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="2026-06-30-SSPLab_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="2026-06-30-SSPLab_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="2026-06-30-SSPLab_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="2026-07-JADT-slides_files/libs/revealjs/dist/theme/quarto-2740581606dc327e82f18f789b69d8a0.css">
+  <link href="2026-07-JADT-slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="2026-07-JADT-slides_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="2026-07-JADT-slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="2026-07-JADT-slides_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -131,266 +131,164 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">ActiveTigger <img data-src="img/at.png" height="100"></h1>
-  <p class="subtitle">Groupe de veille en analyse textuelle INSEE</p>
+  <p class="subtitle">An open source collaborative text annotation software for computational social sciences</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Émilien Schultz / CSS@IPP 
+<a href="https://eschultz.fr">É. Schultz</a>, J. Boelaert, A. Morin, A. Claesson, E. Bonutti D’Agostini, A. Chatelain, É. Ollion 
 </div>
-</div>
+        <p class="quarto-title-affiliation">
+            CREST – Groupe ENSAE-ENSAI – Institut Polytechnique de Paris – CSS@IPP · JADT 2026, Palermo
+          </p>
+    </div>
 </div>
 
-  <p class="date">30 juin 2026</p>
 </section>
-<section id="présentation-démo" class="slide level2">
-<h2>Présentation &amp; démo</h2>
+<section id="activetigger-a-new-tool" class="slide level2">
+<h2>ActiveTigger = a new tool</h2>
 <ul>
-<li>Pourquoi ActiveTigger ?
-<ul>
-<li>CSS &amp; NLP</li>
-<li>Principales fonctionnalités d’ActiveTigger</li>
-</ul></li>
-<li>Démo</li>
-<li>Discussion
-<ul>
-<li>Usages spécifiques</li>
-<li>Evolution de nos pratiques</li>
-</ul></li>
+<li>Why a new tool for text annotation ?</li>
+<li>Some elements of its general philosophy !</li>
+<li>… and a demo rather a long discourse</li>
 </ul>
-</section>
-<section id="origines-dactivetigger" class="slide level2">
-<h2>Origines d’ActiveTigger</h2>
-<ul>
-<li>Des usages de recherche stabilisés
-<ul>
-<li>Annoter des grands corpus avec un ensemble de labels</li>
-</ul></li>
-<li>Démocratiser l’accès au-delà du code
-<ul>
-<li>Démonstrateur en R (É. Ollion et J.Boelaert en 2023)</li>
-<li>Mettre à l’échelle et constituer une communauté de pratique</li>
-</ul></li>
-<li>Faciliter les interactions humaines
-<ul>
-<li>Besoin de collaborer sur un projet</li>
-<li>Faciliter la formation aux outils</li>
-</ul></li>
-</ul>
-</section>
-<section id="impacts-de-recherche" class="slide level2">
-<h2>Impacts de recherche</h2>
-<p>Groupe <a href="https://www.css.cnrs.fr/">CSS@IPP</a> au CREST</p>
-<ul>
-<li><a href="https://shs.cairn.info/revue-revue-francaise-de-science-politique-2025-3-page-IX">Le prix de la visibilité. Une analyse computationnelle des interactions en ligne avec des député·es français·es. Revue française de science politique, Claesson A., 2025</a></li>
-<li><a href="https://shs.cairn.info/revue-actes-de-la-recherche-en-sciences-sociales-2025-3-4-page-126?lang=fr">La part du genre. Genre et approche intersectionnelle dans les sciences sociales françaises au XXIe siècle, Boelaert J. et al, 2025.</a></li>
-</ul>
-<p>Communauté plus large en formation</p>
-<ul>
-<li>Identifier les articles de presse qui parlent de l’environnement (Jules Brion)</li>
-<li>Traitement de corpus d’image (Adrien Rougier et Francesco Colonna)</li>
-<li>…</li>
-</ul>
-</section>
-<section id="des-valeurs-structurantes" class="slide level2">
-<h2>Des valeurs structurantes</h2>
-<ul>
-<li>Augmenter l’humain de manière contrôlée, pas le remplacer</li>
-<li>Favoriser l’exploration, l’idéation et les échanges</li>
-<li>Maitriser le code &amp; les composants utilisés (code auditable)</li>
-<li>Évolutif en fonction des besoins de recherche
-<ul>
-<li>Nouvelles collaborations autour des instruments</li>
-</ul></li>
-</ul>
-</section>
-<section id="des-contributions-multiples" class="slide level2">
-<h2>Des contributions multiples</h2>
-<ul>
-<li>Comité Scientifique</li>
-<li>Accompagnement par Ouestware (Paul Girard)</li>
-<li>Beaucoup de retours des utilisateurs : Merci !
-<ul>
-<li>Nouvelles features</li>
-<li>Intégration continue</li>
-</ul></li>
-</ul>
-</section>
-<section id="situation-actuelle" class="slide level2">
-<h2>Situation actuelle</h2>
-<p>Une V1 en pré-release et une communauté d’utilisateurs instance dev. du CREST</p>
-<ul>
-<li><a href="css.cnrs.fr/active-tigger">Page sur le groupe CSS</a></li>
-<li><a href="github.com/activetigger/activetigger">Dépot Github du code</a></li>
-<li><a href="activetigger.com/documentation">Documentation</a></li>
-<li><a href="https://discord.gg/sd2Em7rrW2">Serveur Discord</a></li>
-</ul>
-<p>Pour avoir un compte sur l’instance du CREST : css@ensae.fr</p>
-</section>
-<section id="pourquoi-activetigger" class="slide level2">
-<h2>Pourquoi ActiveTigger ?</h2>
-<p><em>Tout peut être fait avec un tableur et du code</em></p>
-<ul>
-<li>Faciliter l’interaction avec les données</li>
-<li>Travail en collaboration</li>
-<li>Contraindre les étapes pour garantir la progression</li>
-<li>Avoir de l’active learning pour annoter plus vite</li>
-<li>Accès à des ressources GPU en fonction de l’instance</li>
-<li>Traitement en volume (encodeurs assez légers)</li>
-</ul>
-</section>
-<section id="concrètement-dabord-une-question" class="slide level2">
-<h2>Concrètement ? D’abord une question</h2>
-<p><strong>Comment évolue la prise en compte des réflexion sur le genre dans la littérature en sciences sociales françaises ?</strong></p>
 
-<img data-src="img/partdugenre.png" class="quarto-figure quarto-figure-center r-stretch"><p>Données: Abstract des articles de sciences sociales publiés dans des revues françaises entre 2000 et 2022.</p>
-</section>
-<section id="logique-générale" class="slide level2">
-<h2>Logique générale</h2>
-<p><strong>TL;DR : Mettre un label “genre”/“pas genre” sur un gros volume d’abstracts</strong></p>
+<img data-src="img/capture.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="why-a-new-tool" class="slide level2">
+<h2>Why a new tool ?</h2>
 <ul>
-<li>Définir les concepts</li>
-<li>Annoter un corpus d’entrainement
+<li>Initially, a recurring need: <strong>put labels on large text corpora</strong>
 <ul>
-<li>Maximiser la diversité et limiter le temps passé</li>
+<li>Traing classifiers usually needs specific programming skills…</li>
 </ul></li>
-<li>Entrainer un classifieur pour prédire
+<li>Small LLM (BERT) can be useful once fine-tuned, especially to scale
 <ul>
-<li>Améliorer à un seuil acceptable</li>
+<li>And with embeddings possibility to train classic ML</li>
 </ul></li>
-<li>L’appliquer à l’ensemble du corpus</li>
-<li>Télécharger les résultats</li>
-<li>Analyser…</li>
+<li>Need for reproducible and <strong>on-premises</strong> solutions
+<ul>
+<li>Sensitive data, GDPR <span class="math inline">\(\Rightarrow\)</span>, reproducibility</li>
+</ul></li>
 </ul>
 </section>
-<section id="étapes-principales" class="slide level2">
-<h2>Étapes principales</h2>
+<section id="introducing-activetigger" class="slide level2">
+<h2>Introducing ActiveTigger</h2>
+<p><em>An open source tool to collaboratively annotate text corpora and train classifiers with active learning to speed up annotation.</em></p>
+<p>Built since ~2020 from research practice (J. Boelaert &amp; É. Ollion) <span class="math inline">\(\rightarrow\)</span> public <strong>v1.0.0 released in May 2026</strong></p>
+<ul>
+<li><strong>Document-level</strong> annotation of large corpora of short texts</li>
+<li><strong>Sensible defaults first</strong>, customization later – avoid overwhelming non-experts</li>
+<li><strong>End-to-end integration</strong> in a single platform
+<ul>
+<li>Some thoughts on the UX</li>
+</ul></li>
+</ul>
+</section>
+<section id="what-are-the-main-use-cases" class="slide level2">
+<h2>What are the main use cases ?</h2>
+<ul>
+<li><strong>Annotate quickly a large corpus</strong> – fine-tune models from the interface, use <strong>active learning</strong> to accelerate</li>
+<li><strong>Collaboratively stabilize a codebook</strong> – multiple users + inter-annotator agreement</li>
+<li><strong>Identify and retrieve documents of interest</strong> – BERTopic, regex filters, projections</li>
+<li><strong>Teach NLP</strong> – hands-on experience of a full supervised pipeline, no code required</li>
+</ul>
+</section>
+<section id="a-growing-community" class="slide level2">
+<h2>A growing community</h2>
+<ul>
+<li>Dozens of research projects since 2023; published studies:
+<ul>
+<li>gender in French social sciences (Boelaert et al.&nbsp;2025), MPs on Twitter (Claesson 2025)</li>
+</ul></li>
+<li>Available dev instance <span class="citation" data-cites="CREST">@CREST</span> (with ~&nbsp;150 users)</li>
+</ul>
+<p>Launch your own instance (docker &amp; helm chart on its way)</p>
+<ul>
+<li>Code: <code>github.com/activetigger/activetigger</code></li>
+<li>Docs: <code>activetigger.com/documentation</code> · Discord community</li>
+</ul>
+</section>
+<section id="lets-have-a-demo-gender-in-french-social-sciences" class="slide level2">
+<h2>Let’s have a demo: gender in French social sciences</h2>
+<p><em>How prominent is gender-related research in French social science publications?</em> (Boelaert et al.&nbsp;2025, ARSS)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/active-tigger-overview.svg" class="quarto-figure quarto-figure-center" style="height:75.0%"></p>
+</figure>
+</div>
+</section>
+<section id="connect" class="slide level2">
+<h2>Connect</h2>
+<p><a href="https://demo.activetigger.com">https://demo.activetigger.com</a></p>
+<p><strong>account : jadt{0-50} (same password)</strong></p>
 
-<img data-src="img/process.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="dautres-fonctionnalités" class="slide level2">
-<h2>D’autres fonctionnalités</h2>
-<ul>
-<li>Explorer avec Bertopic</li>
-<li>Sélectionner avec la projection</li>
-<li>Utiliser les prédictions des BERT pour l’active learning</li>
-<li>Comparer les annotations entre utilisateurs</li>
-<li>Expérimenter avec le génératif</li>
-</ul>
-</section>
-<section id="au-commencement-des-données" class="slide level2">
-<h2>Au commencement : des données</h2>
-<p>Tout un travail en amont : mettre en forme les données dans un tableau (pas dans ActiveTigger)</p>
-<ul>
-<li>~30,000 articles, découpées au niveau de la phrase = 50,000 lignes</li>
-<li>Métadonnées présentes: revue, discipline et la proportion d’hommes/femmes dans les co-auteur.ices</li>
-<li>Une colonne d’annotations utilisées comme “gold-standard”</li>
-</ul>
-</section>
-<section id="étape-centrale-le-codage" class="slide level2">
-<h2>Étape centrale : le codage</h2>
-<p>Travail conceptuel : différentes conception du genre</p>
-<ul>
-<li>Quelles sont les catégories ?</li>
-<li>Expérimenter</li>
-</ul>
-<p><em>Choix d’une conception large : à la fois rapports de genre, mention des aspects genrés dans les processus sociaux, etc.</em></p>
-<p>Une étape qui n’en est pas une : stabilisation progressive</p>
-</section>
-<section id="passage-à-la-démo" class="slide level2">
-<h2>Passage à la démo</h2>
-<ul>
-<li>Projet déjà créé</li>
-<li>Comptes accessibles ici sur une instance démo : <a href="https://hedgedoc.lab.groupe-genes.fr/XuEZOCBfS-qH1OS88aq9hA">https://hedgedoc.lab.groupe-genes.fr/XuEZOCBfS-qH1OS88aq9hA</a></li>
-</ul>
-</section>
+<img data-src="img/qrcode.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section>
-<section id="démo" class="title-slide slide level1 center">
-<h1>Démo</h1>
+<section id="more-information" class="title-slide slide level1 center">
+<h1>More information</h1>
 
 </section>
-<section id="se-lancer" class="slide level2">
-<h2>Se lancer</h2>
+<section id="main-features-1-annotate-represent" class="slide level2">
+<h2>Main features (1): annotate &amp; represent</h2>
 <ul>
-<li>Envoyer un mail pour obtenir un compte
+<li><strong>Projects</strong>: CSV / Parquet / XLSX import, stratified train/validation/test split, shared across users</li>
+<li><strong>Annotation</strong>: multiclass &amp; multilabel schemes, integrated codebook, history, filters (label, user, regex, prediction), comments</li>
+<li><strong>Text representations</strong>: sentence-transformers embeddings, fastText, DFM, regex features</li>
+<li><strong>Exploration</strong>: tabular view, 2D projections (UMAP / t-SNE), BERTopic topic models</li>
+</ul>
+</section>
+<section id="main-features-2-train-evaluate-predict" class="slide level2">
+<h2>Main features (2): train, evaluate, predict</h2>
 <ul>
-<li>Ou créer sa propre instance</li>
+<li><strong>Selection strategies</strong>: random, sequential, and active learning (max entropy, target-label probability…)</li>
+<li><strong>Two families of classifiers</strong>:
+<ul>
+<li><em>Quick models</em>: scikit-learn classifiers on features, cross-validated, trained in seconds</li>
+<li><em>BERT models</em>: Hugging Face fine-tuning, key hyperparameters exposed, loss curves</li>
 </ul></li>
-<li>Se lancer dans un projet</li>
-<li>Venir discuter sur le Discord</li>
+<li><strong>Evaluation</strong>: precision / recall / F1 per class, macro F1, confusion matrices, misclassified examples – computed separately on train / validation / test</li>
+<li><strong>Inference &amp; export</strong>: predict on the full dataset or external files; export annotations, features, models, predictions</li>
+<li><em>(Experimental)</em> generative panel: prompt external LLM APIs, compare with human annotations</li>
 </ul>
 </section>
-<section id="la-feuille-de-route" class="slide level2">
-<h2>La feuille de route ?</h2>
+<section id="does-it-hold-up-validation" class="slide level2">
+<h2>Does it hold up? Validation</h2>
+<p><strong>Reproducibility</strong> – fine-tuning benchmark on a published stance-detection dataset (Luo et al.&nbsp;2021, global warming, 3 labels):</p>
 <ul>
-<li>Améliorer l’intégration de l’IA générative</li>
-<li>Finalser le module image &amp; ner</li>
-<li>Une meilleure architecture
+<li>Original BERT-base baseline: accuracy 71% [0.64–0.77]</li>
+<li>ActiveTigger, same parameters: accuracy 0.69–0.72, within the reported confidence interval</li>
+<li>The dataset ships with ActiveTigger so anyone can reproduce</li>
+</ul>
+<p><strong>Robustness</strong> – stress tests on a fresh cloud GPU server (13 min install):</p>
 <ul>
-<li>Gestion de la file d’attente</li>
-</ul></li>
-<li>Meilleure distribution pour deployer (helm chart)</li>
-<li>…</li>
+<li>10 simultaneous projects with BERT trainings: queue handled correctly, delay &lt; 0.8s</li>
+<li>10 users annotating the same project: all operations OK, delay &lt; 0.4s</li>
 </ul>
 </section>
-<section id="comment-citer-activetigger" class="slide level2">
-<h2>Comment citer ActiveTigger</h2>
-<blockquote>
-<p>Schultz, E., Boelaert, J., Morin, A., Bonutti D’Agostini, E., Claesson, A., Ollion, É., &amp; Chatelain, A. (2026). ActiveTigger: An open source collaborative text annotation software for computational social sciences. In Proceedings of the 18th International Conference on Statistical Analysis of Textual Data (JADT 2026), Palermo, Italy, July 8–10, 2026.</p>
-</blockquote>
-</section></section>
-<section>
-<section id="annexe-notions" class="title-slide slide level1 center">
-<h1>Annexe : notions</h1>
-
-</section>
-<section id="embeddings" class="slide level2">
-<h2>Embeddings</h2>
-<p>Embeddings/plongements = représentations vectorielles d’une entité avec un modèle entrainé à conserver l’aspect sémantique.</p>
-
-<img data-src="img/embeddings.jpg" class="quarto-figure quarto-figure-center r-stretch"><p>Source <a href="https://www.ibm.com/think/topics/embedding">Joel Barnard — What is embedding?</a> <a href="https://peerlist.io/manojsde/articles/explain-vector-embeddings-to-your-mom">Manoj Kumar — Explain vector embeddings to your mom</a></p>
-</section>
-<section id="apprentissage-supervisé" class="slide level2">
-<h2>Apprentissage supervisé</h2>
+<section id="limitations-roadmap" class="slide level2">
+<h2>Limitations &amp; roadmap</h2>
+<p><strong>Current limitations for an instance</strong></p>
 <ul>
-<li>Données d’entraînement : des exemples annotés par l’humain</li>
-<li>Apprentissage : un modèle (des poids) progressivement modifié pour améliorer la prédiction sur ces données</li>
-<li>Prédiction : à partir d’une nouvelle entrée, prédire la valeur</li>
-<li>Évaluation : vérifier la qualité de la prédiction
+<li>Single-GPU deployments, a few dozen users</li>
+<li>Exports don’t yet capture full project state</li>
+</ul>
+<p><strong>Roadmap</strong></p>
 <ul>
-<li>Différentes métriques suivant la tâche</li>
-<li>Sur des données initialement non utilisées pour entrainer</li>
-</ul></li>
+<li>Task management refactoring <span class="math inline">\(\rightarrow\)</span> multi-GPU, larger communities</li>
+<li>Stable evaluation framework (reference datasets, versioned benchmarks)</li>
+<li>Generative panel co-designed with the social science community</li>
+<li>Full project archiving for re-executable annotation campaigns</li>
 </ul>
 </section>
-<section id="active-learning" class="slide level2">
-<h2>Active Learning</h2>
-<p>Plutôt que d’annoter au hasard, sélectionner certains éléments</p>
+<section id="takeaways" class="slide level2">
+<h2>Takeaways</h2>
 <ul>
-<li>Départ : entrainer un modèle sur un petit nombre d’annotation</li>
-<li>Identification des éléments les plus incertains</li>
-<li>Prioriser ces éléments</li>
-<li>Réentrainer le modèle &amp; itérer</li>
+<li>ActiveTigger = <strong>end-to-end, collaborative, open source</strong> annotation platform for social sciences</li>
+<li>Encodes supervised-learning best practices in the interface</li>
+<li>Active learning as the bridge between <strong>human annotation and automation</strong></li>
+<li>Validated, in production, and driven by a research community</li>
 </ul>
-<p>Pourquoi c’est utile ?</p>
-<ul>
-<li>Moins d’étiquetage : réduire le travail humain</li>
-<li>Datasets de meilleur qualité : limiter la redondance de l’information</li>
-</ul>
-</section>
-<section id="classifier-bert" class="slide level2">
-<h2>Classifier BERT</h2>
-<p>Une architecture particulière de modèle préentrainés (transformers) de type encodeurs de taille “raisonnable”.</p>
-
-<img data-src="https://jalammar.github.io/images/BERT-classification-spam.png" class="r-stretch"><p>Source: <a href="https://jalammar.github.io/illustrated-bert/">Jay Alammar — The Illustrated BERT, ELMo, and co. (How NLP Cracked Transfer Learning)</a></p>
-</section>
-<section id="quick-et-bert-modèles" class="slide level2">
-<h2>Quick et BERT modèles</h2>
-<p>Des types différents de modèles</p>
-<ul>
-<li>Le nombre de poids : quick = centaines de paramètres ; BERT = centaines de millions</li>
-<li>Le pré-entrainement : quick = entrainé juste sur les données ; BERT = pré-entrainés sur de très gros corpus</li>
-<li>Le temps d’entraînement : &lt;2 min pour les quicks et jusqu’à plusieurs dizaines de minutes pour les plus gros modèles BERT</li>
-</ul>
+<p><strong>Try it</strong>: request an account or deploy your own instance - <a href="emilien.schultz@ensae.fr">emilien.schultz@ensae.fr</a></p>
 
 </section></section>
     </div>
@@ -402,19 +300,19 @@
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="2026-06-30-SSPLab_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="2026-07-JADT-slides_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="2026-06-30-SSPLab_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="2026-06-30-SSPLab_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="2026-06-30-SSPLab_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="2026-06-30-SSPLab_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="2026-06-30-SSPLab_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="2026-07-JADT-slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="2026-07-JADT-slides_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="2026-07-JADT-slides_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="2026-07-JADT-slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="2026-07-JADT-slides_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="2026-06-30-SSPLab_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="2026-06-30-SSPLab_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="2026-06-30-SSPLab_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="2026-06-30-SSPLab_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="2026-07-JADT-slides_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="2026-07-JADT-slides_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="2026-07-JADT-slides_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="2026-07-JADT-slides_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -631,12 +529,12 @@
           // flash "checked"
           button.classList.add('code-copy-button-checked');
           var currentTitle = button.getAttribute("title");
-          button.setAttribute("title", "Copié");
+          button.setAttribute("title", "Copied!");
           let tooltip;
           if (window.bootstrap) {
             button.setAttribute("data-bs-toggle", "tooltip");
             button.setAttribute("data-bs-placement", "left");
-            button.setAttribute("data-bs-title", "Copié");
+            button.setAttribute("data-bs-title", "Copied!");
             tooltip = new bootstrap.Tooltip(button, 
               { trigger: "manual", 
                 customClass: "code-copy-button-tooltip",
